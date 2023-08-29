@@ -6,12 +6,10 @@ function App() {
   const { users, name, setName, email, setEmail, createUser } =
     useHomeController(
       {
-        get: useCaseFactory.getUserUseCase,
         create: useCaseFactory.createUserUseCase,
         list: useCaseFactory.getUsersUseCase,
       },
       {
-        get: memoryRepositoryFactory.getUserExecutor,
         create: memoryRepositoryFactory.createUserExecutor,
         list: memoryRepositoryFactory.getUsersExecutor,
       }

@@ -17,9 +17,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "vite",
+    "build": "tsc --noEmit && vite build",
+    "test": "jest --config ./jest.config.json",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,6 +42,13 @@
   },
   "devDependencies": {
     "@craco/craco": "^7.1.0",
-    "react-app-rewired": "^2.2.1"
+    "@testing-library/react-hooks": "^8.0.1",
+    "@vitejs/plugin-react": "^4.0.4",
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.2.1",
+    "react-test-renderer": "^18.2.0",
+    "ts-jest": "^29.1.1",
+    "vite": "^4.4.9",
+    "vite-tsconfig-paths": "^4.2.0"
   }
 }

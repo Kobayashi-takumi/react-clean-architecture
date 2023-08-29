@@ -117,12 +117,10 @@ presentation で controllers に usecase ととレポジトリなどを注入し
  const { users, name, setName, email, setEmail, createUser } =
     useHomeController(
       {
-        get: useCaseFactory.getUserUseCase,
         create: useCaseFactory.createUserUseCase,
         list: useCaseFactory.getUsersUseCase,
       },
       {
-        get: memoryRepositoryFactory.getUserExecutor,
         create: memoryRepositoryFactory.createUserExecutor,
         list: memoryRepositoryFactory.getUsersExecutor,
       }

@@ -1,9 +1,9 @@
 import { useEffect, useState, useCallback } from "react";
-import { GetUserUseCase } from "@/usecases/user/get";
+// import { GetUserUseCase } from "@/usecases/user/get";
 import { GetUsersUseCase } from "@/usecases/user/list";
 import { CreateUserUseCase } from "@/usecases/user/create";
 import {
-  GetUserExecutor,
+  // GetUserExecutor,
   CreateUserExecutor,
   GetUsersExecutor,
 } from "@/usecases/interfaces/repository/user";
@@ -11,12 +11,12 @@ import { User } from "@/domain/model/user";
 
 export const useHomeController = (
   userUseCase: {
-    get: GetUserUseCase;
+    // get: GetUserUseCase;
     create: CreateUserUseCase;
     list: GetUsersUseCase;
   },
   userRepository: {
-    get: GetUserExecutor;
+    // get: GetUserExecutor;
     create: CreateUserExecutor;
     list: GetUsersExecutor;
   }
